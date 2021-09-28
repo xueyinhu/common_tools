@@ -32,5 +32,5 @@ for query in query_list:
 print(md_file_read_result)
 result = start_html_to_md(md_file_read_result)
 
-with open('./test/test_jp.md', 'w', encoding='utf-8') as f:
+with open('./test/test_turn.md', 'w', encoding='utf-8') as f:
     f.write(result)

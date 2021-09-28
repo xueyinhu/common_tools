@@ -18,6 +18,3 @@ def get_md_str(md_file_path):
     md_file_read_result = read_md_file(md_file_path)
     return md_file_read_result
 
-
-def generation_md_from_Html():
-    pass
