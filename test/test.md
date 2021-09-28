@@ -6,16 +6,9 @@
 
 1. 使用步骤：
 
-   1. 安装 mistletoe， html2text 模块
+   1. 将要转换的 .md 文件替换 ./test/test.md
 
-      ```shell
-      pip install mistletoe
-      pip install html2text
-      ```
-
-   2. 将要转换的 .md 文件替换 ./test/test.md
-
-   3. 修改use.storage文件，写入appid、appkey、to_lang等参数，from_lang不需要修改，也不要新增行。
+   2. 修改use.storage文件，写入appid、appkey、to_lang等参数，from_lang不需要修改，也不要新增行。
 
       ```text
       appid: ??? 百度翻译API的appid
@@ -24,10 +17,10 @@
       to_lang: jp/en/... 百度翻译API提供的语种缩写
       ```
 
-   4. 执行转换代码
+   3. 执行转换代码
 
       ```shell
-      python start_conversion.py
+      python start.py
       ```
 
 2. 转换结果：

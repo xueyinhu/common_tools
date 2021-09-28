@@ -6,16 +6,9 @@
 
 1. 使用手順：
 
-   1. インストール mistletoe， html2text モジュール
+   1. 変換する .md ファイル置換 ./test/test.md
 
-      ```shell
-      pip install mistletoe
-      pip install html2text
-      ```
-
-   2. 変換する .md ファイル置換 ./test/test.md
-
-   3. 変更use.storageファイル，書き込みappid、appkey、to_langパラメータ，from_lang不需要変更，行を追加しないでください。
+   2. 変更use.storageファイル，書き込みappid、appkey、to_langパラメータ，from_lang不需要変更，行を追加しないでください。
 
       ```text
       appid: ??? バイドゥの翻訳APIのappid
@@ -24,10 +17,10 @@
       to_lang: jp/en/... バイドゥの翻訳API提供する言語の略語
       ```
 
-   4. 変換コードを実行
+   3. 変換コードを実行
 
       ```shell
-      python start_conversion.py
+      python start.py
       ```
 
 2. 結果を変換：
