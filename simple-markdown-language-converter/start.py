@@ -1,4 +1,4 @@
-from os import times
+import json
 import re
 import random
 from hashlib import md5
@@ -15,7 +15,6 @@ def code_switching(appid, appkey, from_lang, to_lang, query):
     payload = {'appid': appid, 'q': query, 'from': from_lang, 'to': to_lang, 'salt': salt, 'sign': sign}
     r = requests.post(url, params=payload, headers=headers)
     result = r.json()['trans_result']
-    # result = json.dumps(result, indent=4, ensure_ascii=False)
     result = [result[0]['src'], result[0]['dst']]
     return result
 
@@ -35,7 +34,7 @@ with open('./use.storage', 'r', encoding='utf=8') as f:
 new_lines = []
 
 
-with open('test/test.md', 'r', encoding='utf-8') as f:
+with open('./test/test.md', 'r', encoding='utf-8') as f:
     lines = f.readlines()
     for line in lines:
         sentence_list = list(filter(lambda sentence: sentence != '', re.split('<.*?>|[^\u4e00-\u9fa5]+', line.replace('$$', '').replace('\n', ''))))
@@ -46,6 +45,6 @@ with open('test/test.md', 'r', encoding='utf-8') as f:
                 line = line.replace(switching_result[0], switching_result[1])
         new_lines.append(line)
 
-with open('test/test_turn.md', 'a', encoding='utf-8') as f:
+with open('./test/test_turn.md', 'a', encoding='utf-8') as f:
     for new_line in new_lines:
         f.write(new_line)
