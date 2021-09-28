@@ -38,7 +38,6 @@
         <font size=3 color=red>こんにちは，解析してくださいMarkdown。</font>
         $$ s = 23 $$
         
-        
         > ポイントかります，你追寻の是快乐。
         
         `npm install marked`
