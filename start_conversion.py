@@ -24,7 +24,6 @@ query_list = get_sentence_list(md_file_path)
 
 md_file_read_result = get_md_str(md_file_path)
 
-print(md_file_read_result)
 
 for query in query_list:
     time.sleep(1)
