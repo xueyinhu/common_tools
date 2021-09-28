@@ -42,7 +42,7 @@ with open('./test/test.md', 'r', encoding='utf-8') as f:
             for sentence in sentence_list:
                 time.sleep(1)
                 switching_result = code_switching(appid, appkey, from_lang, to_lang, sentence)
-                line = line.replace(switching_result[0], switching_result[1])
+                line = line.replace(switching_result[0], switching_result[1].replace('，', '').replace('。', ''))
         new_lines.append(line)
 
 with open('./test/test_turn.md', 'a', encoding='utf-8') as f:
